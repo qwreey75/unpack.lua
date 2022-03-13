@@ -13,8 +13,8 @@ And this library using this to fill nils and make values same as original inputs
 As you can see this code, this lib will fix lua's default unpack function  
 
 ```lua
-require("unpack.lua")
-local a,b,c,d = table.unpack(table.pack("asdfff","asd",nil,"asdf"))
+local unpack = require("unpack.lua")
+local a,b,c,d = unpack(table.pack("asdfff","asd",nil,"asdf"))
 print(a) -- will print asdfff
 print(b)
 print(c)
@@ -23,6 +23,6 @@ print(d) -- will print asdf
 
 Also as an option, you can add how much values in there with `table.unpck(table,[length])`  
 ```lua
-require("unpack.lua")
-print(select("#",table.unpck({"asdf","qwer"},5))) -- will print 5
+local unpack = require("unpack.lua")
+print(select("#",unpck({"asdf","qwer"},5))) -- will print 5
 ```

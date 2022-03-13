@@ -12,6 +12,4 @@ local function unpack(t,n,p)
 	return t[p],unpack(t,n,p+1);
 end
 
-table.unpack = unpack;
-
 return unpack;
